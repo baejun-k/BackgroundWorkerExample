@@ -63,6 +63,13 @@ protected:
 	/// </summary>
 	void BackgroundProc();
 
+	/// <summary>
+	/// 작업이 추가됐고 background worker가 Run() 상태일 떄, 
+	/// message queue의 맨 앞 작업을 들고 옴
+	/// </summary>
+	/// <param name="outTask"></param>
+	/// <param name="milliSec"></param>
+	/// <returns></returns>
 	bool GetFrontTask(std::shared_ptr<IRunnable> &outTask, const unsigned long long &milliSec = 10);
 
 public:

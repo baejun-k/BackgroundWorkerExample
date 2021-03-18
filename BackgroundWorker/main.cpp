@@ -26,10 +26,8 @@ int main()
 
 	for ( int i = 0; i < 10; ++i )
 	{
-		//bgw.AddTask(std::shared_ptr<IRunnable>(new TestRun()));
-		bgw.AddTask(std::shared_ptr<IRunnable>(dynamic_cast<IRunnable *>( new TestRun() )));
+		bgw.AddTask(std::shared_ptr<IRunnable>(new TestRun()));
 	}
-
 
 	if ( !bgw.WaitToExit(10) )
 	{
